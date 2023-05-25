@@ -1,0 +1,181 @@
+#h1{
+    text-align: center;
+    background-color:lightgreen;
+    height: 100px;
+    color: rgba(255, 192, 203, 0.774);
+    border: 6px;
+}
+#body1{
+    background-color:lightgoldenrodyellow;
+}
+#div{
+    background-color: azure;
+    
+}
+#carouselExampleInterval {
+    height:400px !important;
+    width: 100%;
+}
+
+.do1{
+    background:url('div31.webp');
+    background-size: cover !important;
+
+}
+#do1 a:hover{
+    color:brown;
+}
+.icon{
+    height: 50px;
+
+}
+.icon a:hover{
+  color:red;
+}
+#div5{
+    border: 200px;
+    width: 150px;
+    
+}
+#ser{
+    text-align: center;
+    
+    
+}
+#services img,#gallery img{
+    width:100%;
+}
+
+#p1{
+    text-align: center;
+}
+
+
+#btn1{
+    text-align: center;
+    background-color: red;
+}
+#btn1 a:hover{
+    color:yellow;
+}
+
+#btn2{
+    text-align: center;
+    background-color: red;
+}
+#btn2 a:hover{
+    color:yellow;
+}
+#btn3{
+    text-align: center;
+}
+#btn3 a:hover{
+    color:yellow;
+}
+#btn4{
+    text-align: center;
+    
+}
+#btn4 a:hover{
+    color:yellow;
+}
+#div6{
+    height: 100%;
+
+}
+#div7{
+    text-align: center;
+    border: solid;
+}
+#div8{
+    text-align: center;
+    
+}
+#div9{
+    background: url('div1.webp');
+    background-size: cover;
+    height: 10%;
+    width: 100%;
+
+  
+}
+#carouselExampleCaptions{
+    height: 100% !important;
+    width: 100% !important;
+     margin: center;
+     padding: 10px;
+}
+#h5{
+    text-align: center;
+    border-bottom: solid;
+    
+}
+#col3{
+    width: 70%;
+    height: 15%;
+}
+#col4{
+    width: 70%;
+    height: 15%;
+}
+#col5{
+    width: 70%;
+    height: 15%;
+}
+#col6{
+    width: 70%;
+    height: 15%;
+}
+#last{
+    background-color: brown;
+    height: 20%;
+    width: 100%;
+}#hol{
+    text-align: center;
+
+    
+}
+#ser1{
+    
+    background-color:lightgoldenrodyellow;
+    width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s;
+}
+#ser1 a:hover{
+  transition: width 2s;
+}
+#conf{
+
+    background:url('div31.webp');
+    
+}
+#tiffen{
+    color: black;
+}
+#tiffen a:hover{
+
+ color:red;
+ background: yellow;
+
+ width: 10px;   
+}
+#our{
+    background-color:lightgoldenrodyellow;
+    width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s;
+}
+#ser2{
+    white-space: nowrap;
+    width: 200px;
+    border: 1px solid #000000;
+    overflow: hidden;
+    text-overflow: clip;
+}
+.actice{
+    background-color: red;
+}
+

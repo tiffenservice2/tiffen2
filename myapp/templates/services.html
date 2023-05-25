@@ -1,0 +1,29 @@
+ {% extends "base.html" %}
+ {% load static%}
+ {% block  content %}
+
+ <div class="row">
+	<h3 CLASS="text-center fw-bold bg-warning fs-1">MORE SERVICE</h3>
+	<br/>
+	{% for s in ser %}
+	<div class="col-md-5 offset-1">
+		<a href="/services/" class=" text-decoration-none text-dark">	
+		</a>
+			 <h3 class="text-center bg-danger">{{s.type}}</h3>
+				<a href=" /serviceitem/{{ s.id }}" class=" text-decoration-none"> <h3 class=""><i>{{s.descripaction}}</i></h3></a>
+	
+
+	</div>
+	<div class="col-md-5 mr-2">
+		<img  class="text-center" src="/media/{{s.photo}} " style="height:500px; width:100%;"/>
+		<br/>
+<br/>
+	</div>
+
+			{% endfor %}
+	
+		
+</div>
+<br/>
+<br/>
+ {% endblock %}

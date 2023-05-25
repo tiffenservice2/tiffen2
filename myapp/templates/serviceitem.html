@@ -1,0 +1,35 @@
+    {% extends 'base.html'%}
+    {% block content %}
+
+    <div class="row p-4 bg-warning  ">
+       
+    {% for i in item %}
+    <div class="col-md-6 offset-auto text-center p-4 fw-bold mt-5 ">
+        <div class="row ">
+            <div class="col-md-4 offset-4 bg-info">
+            <p>{{ i.itemname}}</p>
+            <p>{{ i.serviceid}}</p>
+            
+            price<h3>{{i.price}}</h3>
+            <h3>{{i.im}}</h3>
+            <form action="{% url 'cart:cart_add' i.id %}" method="post">
+				{% csrf_token %}
+                {{ cart_serviceitem_form }}
+                <button type="submit" value="add to cart" class="btn btn-primary">Add To Card</button>
+            </form>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 offset-auto">
+        <img  class="mt-5" src="/media/{{i.photo}}" style="height:300px; width:100%; "/>
+
+    </div>
+    
+</br>
+    {% endfor%}
+    
+</div>
+   
+
+    {% endblock %}

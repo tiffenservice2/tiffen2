@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static  %}
+{% block content %}
+
+     <div class="row bg-warning">
+      <div class="text-center">
+        <h2 class="text-center fw-bold">REGISTERATION</h2>
+        </div>
+      <div class="col-md-8 text-center  offset-auto p-4">
+       
+        <form method="post" class="">
+                    {% csrf_token %}
+                    {% for field in form %}
+                   
+                        <div class="row offset-4">
+                          <div class="col-md-4 offset-1 text-center ">
+                            
+                      
+                            
+                          <label class=" fs-5">{{ field.label}}</label>
+                          </div>
+                      
+
+                          <div class="col-md-3 offset-2 form control">
+                             {{field}}
+                            </div>
+                          </div>
+                      {% for error in field.errors %}
+                        <h5>{{ error }}</h5>
+
+                      {% endfor %}
+                    <br/>
+                    {% endfor %}
+                    
+                        <button type="submit" class="btn btn-success">sumbit</button>
+                        &nbsp &nbsp &nbsp
+                        <span><button type="Reset" class="btn btn-danger">Clear</button></span>
+
+          </form>
+        </div>
+      </div>
+
+{% endblock%}

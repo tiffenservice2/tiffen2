@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static  %}
+{% block content %}
+     <div class="row">
+            <h3 class="text-center">blogs</h3>
+            {% for b in blg %}
+            <div class="col-md-6 p-3 blogs text-center">
+                <a href="/blogdetail/{{ b.id}}" class=" text-decoration-none text-dark">
+                    <h3>{{b.title}}</h3>
+                    
+                    <img src="/media/{{ b.photo }}"/>
+                    
+                    <p>{{b.postby}} ({{ b.poston}})</p>
+                </a>
+            </div>
+            {% endfor %}
+    
+
+    </div>
+       
+
+        {% endblock %}

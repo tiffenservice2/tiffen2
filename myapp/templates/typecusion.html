@@ -1,0 +1,31 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+
+
+{% for i in cust %}
+    <div class="row  ">
+        <div class="col-md-5 mt-5 ps-5 p-5">
+            <h5 class="fw-bold text-danger">{{ i.itemname}}</h5>
+            <p>{{ i.cusionid}}</p>
+            <p class="fw-bold">{{i.descripaction}}</p>
+        
+           <center><h3 class=" fw-bold text-danger mt-5"> Price</h3><h3>{{i.price}}</h3></center>
+            <h3>{{i.im}}</h3>
+           <center> <button type="sumbit" class="btn btn-danger text-center">Add To Card</button></center>
+            </div>
+        
+
+    <div class="col-md-6 offset-auto">
+        <img  class="mt-5" src="/media/{{i.photo}}" style="height:500px; width:100%; "/>
+
+    </div>
+    
+        
+</div>
+
+</br>
+{% endfor%}
+
+
+{% endblock %}

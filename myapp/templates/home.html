@@ -1,0 +1,243 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+				  <!--startsercice-->
+				  <div class="row p-5">	
+					<div class="col-md-5">				
+					<h3 class="text-center text-dark fw-bold">Our Services</h3>
+					</div>
+
+				</div>
+				  <div class="row offset-1 ">
+
+						<div class="col-md-3  mt-5 mr-5 mb-5 p-5 ps-5  text-center fw-5  border ">
+							<a href=""><center><i class="fa-solid fa-house display-2  text-danger  "></center></i></a>
+							<h4  class="myfont text-center  text-dark mt-2"> HOME DELIVERY </h4>
+							
+						</div>
+						<div class="col-md-3  mr-5 mt-5 mb-5 p-5  offset-1     display-2  border ">
+							<a href=""><center><i class="fa-solid fa-mug-hot   text-danger"></center></i></a>
+							<h4 class="myfont text-center  text-dark mt-2">HOT FOOD </h4>
+							
+						</div>
+						<div class="col-md-3  mt-5 mb-5  p-5  offset-1    display-2  border ">
+							<a href="" ><center><i class=" fa-solid fa-thin fa-bowl-food display-2 text-danger"></center></i></a>
+							<h4  class="myfont text-center  text-dark mt-2">VRG.FOOD </h4>
+						
+						</div>
+					
+					 </div>
+			
+
+                   <div class="row bg-secondary p-5" style="height:300px;"><center> SERVICES</center>
+					
+				
+
+				
+					    <div class="col-md-4">
+								<h4>Great restaurants in Mandi Dabwali, delivering to you</h5>
+								<h5>Set exact location to find the right restaurants near you.</h5>
+
+								</div>
+							<div class="col-md-8">
+				
+						
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13801.402815253046!2d74.90918485!3d30.141387799999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m3!3e0!4m0!4m0!5e0!3m2!1sen!2sin!4v1684473966045!5m2!1sen!2sin" width="100%%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+							</div>
+							</div>
+						
+				
+
+					
+							
+				
+				<div class="row offset" data-aos="fade-down-right">
+						<h2 class="display-4 fw-bold text-center"><blink> Services
+
+						</h2><hr/>
+						{% for s in ser %}
+					<div class="col-md-4 p-3"><a href="/serviceitem/{{ s.id }}"><img  src="/media/{{ s.photo }}" alt="Tiffin Service" style="width: 300px; height:300px; position:relative;" class="rounded offset-2 img-rounded" >
+						<i><h4 class="text-center fw-bold"id="tiffen" >{{ s.type }}</h4></a></i>
+					</div>
+					{% endfor %}
+					
+				</div>
+			</br>
+		
+				
+		
+				    
+
+				
+				
+				
+
+
+<!--sercice end-->
+
+
+
+
+
+
+
+
+
+
+
+					   <!--<div class="row">
+					   <div class-"col-md-3"><img src="{% static 'div2.wepg' %}"/></div>
+					   <div class-"col-md-3"></div>
+					   <div class-"col-md-3"></div>
+					   <div class-"col-md-3"></div>
+					   </div>
+				 
+							 <div class="carousel-item">
+							   <img src="{% static 'div11.webp'%}" class="d-block widht-50" alt="2">
+							</div></br>
+
+						<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+						   <div class="carousel-inner">
+							  <div class="carousel-item active" data-bs-interval="10000">
+								  <img src="{% static 'div21.webp ' %}" class="d-block  widht-50" alt="0">
+							  </div>
+									<div class="carousel-item" data-bs-interval="2000">
+										<img src="{% static 'div14.webp'%}" class="d-block widht-50" alt="1">
+									</div>
+							  </div>
+										  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+											<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+											<span class="visually-hidden">Previous</span>
+										  </button>
+											  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+												<span class="carousel-control-next-icon" aria-hidden="true"></span>
+												<span class="visually-hidden">Next</span
+																  </button>-->
+																  <br/>	
+				<div class="row">
+				  <h1 id="hol" class="display-5 fw-bold" ><i> Types of Cuisine</i></h1>
+				  <br/>
+
+				  <hr/>
+				  
+				
+				</div>
+				  <div class="row  "></div>
+					 <div class="row" data-aos="flip-left">
+						{% for c in cus %}
+					<div class="col-md-3 text-center ">
+						<a href="/serviceitemdetail/{{ c.id }}"><h3>{{c.itemname }}</h3>
+						<img src="/media/{{c.photo}}" class="img-fluid rounded-pill" alt="">
+						<p>{{c.descripaction}}</a>
+						</p>
+				</div> {% endfor %}
+				
+				</div>
+			
+				  <div class="row rounded"><img src="{% static 'div5.webp'%}" alt="">
+					</div>
+					<div class="row fa-bold"   id="ser"><h2 class="fw-bold myfont display-4 "><i> OUR SERVICES</i></h2><p id="p1" class="fw-bold fw-size-5px">We have an exceptional range of services to help you.</p></div>
+					<hr/> 
+					<div class="row fa-border fw-bold" id="services" data-aos="fade-down-right">
+					  <div class="col-md-3 "><img src="{% static 'div11.webp'%}"alt="" class="rounder"/>
+						<p>Allow us to take care of your daily lunch, regardless if you’re at work or at home.</p>
+						</div>
+					  <div class="col-md-3"><img src="{% static 'div12.webp'%}"alt="" />
+					  <div class=" align-center font-size-16 not-editable para-2 editable-content" style="" contenteditable="false"><p>What would you choose? Stale cooked hotel food or goodness and wholeness of nutritious food?</div>
+						</p></div>
+					  <div class="col-md-3"><img src="{% static 'div13.webp'%}"alt="">     <p>Yes, you can virtually design your own meals and choose from plenty of options provided by us.</p>   </div>
+					  <div class="col-md-3"><img src="{% static 'div14.webp'%}"alt="">    <p>We make sure you bond well with your fellow colleagues over tasty and satiating food dishes.</p>     </div>
+					 </div>
+					</br>
+					 <div class="row p-2 rounded"> <img src="{% static 'div20.webp'%}"alt="" id="div6"></div>
+					 <div class="row" ><h1 class="mt-2 mb-2 text-center fw-bold">ABOUT US</h1></div>
+				  </br>
+				  <div class="row p-3 fa-border"><p class="fw-bold">We, Billy Tiffin Services, situated at Malad West, Mumbai, Maharashtra, offer pre-planned meal packages that a customer can customize to his liking. It is our endeavor to make sure that you enjoy homely cooked food at very affordable rates and hassle-free packages. We offer a wide array of meal options in vegetarian and non-vegetarian sections. Each option is not just finger-licking good but highly nutritious and prepared under very hygienic conditions.</p></div>
+				</br>
+			  </br>
+			  <div id="div8" class="mt-4 mb-4 row "><h1 class="fw-bold myfont display-4 "> GALLERY</h1></div>
+			  <hr/>
+			</br>
+		  </br>
+			  <div class="row " id="gallery" data-aos="fade-left">
+				<div class="col-md-4"><img src="{% static 'div21.webp'%}" alt="Tiffin Service"></div>
+				<div class="col-md-4"><img src="{% static 'div22.webp'%}"alt=""></div>
+				<div class="col-md-4"><img src="{% static 'div23.webp'%}" alt=""></div>
+			  </div>
+			</br>
+		  <!--
+			   <div id="div9" class="row mt-5 mb-5 mr-4">
+				
+					<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+						<div class="carousel-indicators">
+						<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+						<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+						<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+					</div>
+				   
+				 
+				</div>
+			   -->
+			  </br>
+			</br>
+			  
+			<div class="row ">
+						<h1 id="h5" class="fw-bold myfont display-4 "></i>CONTENTS</h1>
+			</div>
+				<div class="row "id="conf">
+
+					<div class="row p-5 bg-color-dark offset-auto" >
+						<div class="col-md-4 offset-2">
+						
+						<label class="col-sm-2 col-form-label mr-5 bold display-2 "><h3>Name</h3></label>
+						<br/>
+						<br/> 
+						<label class="col-sm-2 col-form-label mr-5 bold display-2 "><h3>Adress.</h3></label><br/>
+						<br/>
+						
+						<label  class="col-sm-2 col-form-label mr-5 bold display-2 "><h3>Email</h3></label><br/>
+						<br/>
+					  
+						<label for="inputPassword" class="col-sm-2 col-form-label mr-2 bold display-5 "><h3>Message</h3></label><br/>
+					
+						</div>		
+						<div class="col-md-4">
+							<form action="/insertcontect/" method="post">
+								{% csrf_token %}
+	
+							  <input type="text" class="form-control " id="" name="fname"><br/>
+							  </br>
+							  <input type="text" class="form-control " id="" name="contect"><br/>
+							  <br/>
+							  <input type="Email" class="form-control " id="" name="email"><br/>
+
+							  <br/>
+							  <textarea class="form-control " name="message"></textarea>
+							  <br/>
+							  <br>
+							  <button type="submit" class="btn btn-success center">Success</button>
+							  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							  <button type="reset" class="btn btn-danger">Danger</button>
+							</form>	
+					   </div>
+
+				</div>
+			</div>
+				
+						
+					<div class="row pt-5px pr-5px">
+						<div class="col-md-12">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6900.025232892749!2d74.91094357349665!3d30.15105530466801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39172c548397642f%3A0x6ab5c2151a3c0bdb!2sJodhpur%20Romana%2C%20Punjab%20151001!5e0!3m2!1sen!2sin!4v1676959970870!5m2!1sen!2sin" width="100%" height="400px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+	        		</div>
+				
+				
+					</br>
+			  		</br>
+			  
+				{% endblock %}                                                                                                               
+										  
+														 

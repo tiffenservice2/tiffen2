@@ -1,0 +1,25 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+
+
+<div class="row">
+    <h1 id="hol" class="display-5 fw-bold" ><i> Types of Cuisine</i></h1>
+    <br/>
+
+    <hr/>
+    
+  
+  </div>
+<div class="row  "></div>
+					 <div class="row" data-aos="flip-left">
+						
+						{% for c in cus %}
+					<div class="col-md-3 text-center ">
+						<a href="/serviceitemdetail/{{ c.id }}" class=" text-decoration-none text-dark">	
+<img src="/media/{{c.photo}}" class="img-fluid rounded-pill" alt=""> <h3>{{c.itemname }}</h3><p>{{c.descripaction}}
+					</p></a>
+				</div> {% endfor %}
+				
+				</div>
+{% endblock %}
